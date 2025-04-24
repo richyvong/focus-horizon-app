@@ -26,6 +26,7 @@ export default function Auth() {
 
     try {
       if (isSignUp) {
+        // Removed any password length validation
         const { error } = await supabase.auth.signUp({
           email,
           password,
